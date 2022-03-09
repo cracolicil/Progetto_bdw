@@ -4,9 +4,16 @@
 </head>
 <body>
   <h1>Libreria di film</h1><br>
-  <form action="ricerca.php" method="post">
-    <label for="search">Search film:</label><br>
+  <form action="ricerca.php" method="get">
+    <label for="search">Cerca:</label><br>
     <input type="text" id="search" name="searchname">
+    <label for="tab">In: </label>
+    <select id="tab" name="tab">
+      <option value="film">Film</option>
+      <option value="persone">Persone</option>
+      <!--<option value="">Genere</option> -->
+      <option value="tutto">Tutto</option>
+    </select>
     <input type="submit" value="Search">
   </form>
   Oppure dai un'occhiata alla <a href="lista_film.html.php">lista completa dei film</a>
