@@ -1,4 +1,5 @@
 <?php
+function OpenCon(){
   $hostname = "localhost";
   $dbname = "libreriafilm";
   $user = "root";
@@ -8,4 +9,7 @@
   }catch(PDOException $e){
     echo "Errore: " . $e->getMessage();
   }
+
+  return $db;
+}
 ?>

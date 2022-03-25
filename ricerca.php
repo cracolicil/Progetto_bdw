@@ -1,15 +1,20 @@
 <?php
-  exec('connection.php');
+include 'connection.php';
 
-  $sql = "SELECT * FROM " . "`" . $_POST["tab"] . "`" . " WHERE ";
+$db = OpenCon();
 
-  $statement = $db->query($sql);
+$sqlFilm = "SELECT * FROM " . "`FILM` WHERE titolo LIKE '%" . $_POST['searchname'] . "%'";
 
-  $films = $statement->fetchAll(PDO::FETCH_ASSOC);
+//mettere a posto la call di connection.php
 
-  if($films){
-    foreach($films as $film){
-      echo $film['titolo'] . ' ' . $film['durata'] . ' min ' . $film['durata'] . '<br>';
-    }
+$statement = $db->query($sqlFilm);
+
+$films = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+if($films){
+  foreach($films as $film){
+    echo $film['titolo'] . ' ' . $film['durata'] . ' min ' . $film['anno'] . '<br>';
   }
+}
+
 ?>
