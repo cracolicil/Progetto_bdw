@@ -4,6 +4,8 @@ session_start();
 ?>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Pagina film</title>
 </head>
 <body>
   <div class="header">
@@ -16,5 +18,12 @@ session_start();
     <?php echo $value['titolo'] . '<br>Durata: ' . $value['durata'] . ' min<br>Uscita: ' . $value['anno'] . '<br>genere: ' . $value['genere'] . '<br>';?>
   </p>
   <?php endforeach; ?>
+  <?php
+  $people = $_SESSION['people'];
+  foreach($people as $value): ?>
+    <a href=""  class="person-link">
+      <?php echo $value['nome'] . ' ' . $value['cognome'] . ' Ruolo: ' . $value['ruolo'] . '<br>';;?>
+    </a>
+    <?php endforeach; ?>
 </body>
 </html>

@@ -6,8 +6,8 @@
     <nav>
         <img src="images/logo.jpg" class="logo">
         <ul class="nav-links">
-            <li><a href="">HOME</a></li>
-            <li><a href="">LISTA</a></li>
+            <li><a href="index.html.php">HOME</a></li>
+            <li><a href="lista_film.html.php">LISTA</a></li>
         </ul>
     </nav>
 </body>
