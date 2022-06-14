@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Home del progetto</title>
   </head>
   <body>
