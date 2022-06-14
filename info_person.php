@@ -13,20 +13,22 @@ $sqlInfo = "SELECT *
 $statement = $db->query($sqlInfo);
 $infoPerson = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlDirected = "SELECT f.idFilm 
+$sqlDirected = "SELECT f.idFilm, f.titolo, f.anno
                 FROM `film` as f
                 JOIN `ruolo` as r ON f.idFilm = r.idFilm
                 JOIN `persone` as p ON p.idPersona = r.idPersona
-                WHERE p.idPersona = " . $idPerson . " AND r.ruolo = 'Regista'";
+                WHERE p.idPersona = " . $idPerson . " AND r.ruolo = 'Regista'
+                ORDER  BY f.anno";
 
 $statement = $db->query($sqlDirected);
 $directed = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlActed = "SELECT f.idFilm 
+$sqlActed = "SELECT f.idFilm, f.titolo, f.anno
              FROM `film` as f
              JOIN `ruolo` as r ON f.idFilm = r.idFilm
              JOIN `persone` as p ON p.idPersona = r.idPersona
-             WHERE p.idPersona = " . $idPerson . " AND r.ruolo = 'Regista'";
+             WHERE p.idPersona = " . $idPerson . " AND r.ruolo = 'Attore'
+             ORDER BY f.anno";
 
 $statement = $db->query($sqlActed);
 $acted = $statement->fetchAll(PDO::FETCH_ASSOC);

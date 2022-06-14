@@ -24,7 +24,7 @@ session_start();
 
   if($films){
     foreach($films as $film){
-      echo '<a href=info_film.php?idFilm='.$film['idFilm'].'>' . $film['titolo'] . '</a><br>';
+      echo '<a href=info_film.php?idFilm='.$film['idFilm'].' class="link">' . $film['titolo'] . '</a><br>';
     }
   }
   ?>
