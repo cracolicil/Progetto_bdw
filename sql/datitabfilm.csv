@@ -1,4 +1,10 @@
-1,Le Iene,\trama\trama_le_iene.hmtl,99,1992
-2,Pulp Fiction,\trama\trama_pulp_fiction.html,154,1994
-3,Kill Bill,\trama\trama_kill_bill.html,106,2003
-4,Kill Bill 2,\trama\trama_kill_bill_2.html,137,2004
+1,Le Iene,trama/trama_le_iene.hmtl,99,1992-12-06
+2,Pulp Fiction,trama/trama_pulp_fiction.txt,154,1994-02-05
+3,Kill Bill,trama/trama_kill_bill.txt,106,2003-07-15
+4,Kill Bill 2,trama/trama_kill_bill_2.txt,137,2004-29-01
+5,Spider-Man,trama/trama_spider_man.txt,121,2002-08-16
+6,Spider-Man 2,trama/trama_spider_man_2.txt,127,2004-12-12
+7,Spider-Man 3,trama/trama_spider_man_3.txt,139,2007-04-15
+8,Il Signore Degli Anelli - La Compagnia dell'Anello,trama/trama_lotr_1.txt,178,2001-12-12
+9,Il Signore Degli Anelli - Le due torri,trama/trama_lotr_2.txt,179,2002-05-25
+10,Il Signore Degli Anelli - il ritorno del re,trama/trama_lotr_3.txt,200,2003-08-15
