@@ -20,7 +20,7 @@ session_start();
 
   $films = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-  $_SESSION["idFilm"] = 1;
+  $_SESSION['idFilm'] = 1;
   /*
   per gestire SESSION di idFilm
   -array di session idFilm??
@@ -30,7 +30,7 @@ session_start();
 
   if($films){
     foreach($films as $film){
-      echo '<a href=info_film.html.php>' . $film['titolo'] . ' ' . $film['durata'] . ' min ' . $film['anno'] . '</a><br>';
+      echo '<a href=info_film.php>' . $film['titolo'] . ' ' . $film['durata'] . ' min ' . $film['anno'] . '</a><br>';
     }
   }
   ?>
