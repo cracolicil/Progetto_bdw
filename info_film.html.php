@@ -6,6 +6,9 @@ session_start();
 <head>
 </head>
 <body>
+  <div class="header">
+    <?php include('header.php');?>
+  </div>
   <?php
   include 'connection.php';
 

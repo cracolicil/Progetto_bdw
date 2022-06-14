@@ -6,6 +6,9 @@ session_start();
 <head>
 </head>
 <body>
+  <div class="header">
+    <?php include('header.php');?>
+  </div>
   <?php //ricerca di tutti i film query="SELECT * FROM `FILM`"
   include 'connection.php';
 
@@ -27,7 +30,7 @@ session_start();
 
   if($films){
     foreach($films as $film){
-      echo '<a href=info_film.html.php>' . $film['titolo'] . ' ' . $film['durata'] . ' min ' . $film['durata'] . '</a><br>';
+      echo '<a href=info_film.html.php>' . $film['titolo'] . ' ' . $film['durata'] . ' min ' . $film['anno'] . '</a><br>';
     }
   }
   ?>
