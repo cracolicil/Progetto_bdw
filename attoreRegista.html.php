@@ -1,7 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <title>Lista film</title>
+    <title>Attore fun fact</title>
 </head>
 <body>
   <div class="header">

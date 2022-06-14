@@ -8,7 +8,7 @@
         <ul class="nav-links">
             <li><a href="index.html.php">HOME</a></li>
             <li><a href="lista_film.html.php">LISTA</a></li>
-            <li><a href="lista_film.html.php">CURIOSITA'</a></li>
+            <li><a href="curiosity.html.php">CURIOSITA'</a></li>
         </ul>
     </nav>
 </body>
