@@ -26,12 +26,6 @@ CREATE TABLE GENERI(
   PRIMARY KEY (idGenere)
 );
 
-CREATE TABLE SERIE(
-  idSerie int NOT NULL AUTO_INCREMENT,
-  nome varchar(255),
-  PRIMARY KEY (idSerie)
-);
-
 CREATE TABLE RUOLO(
   idRuolo int NOT NULL AUTO_INCREMENT,
   idFilm int,
@@ -49,15 +43,4 @@ CREATE TABLE GENEREFILM(
   PRIMARY KEY (idGenereFilm),
   FOREIGN KEY (idFilm) REFERENCES FILM(idFilm),
   FOREIGN KEY (idGenere) REFERENCES GENERI(idGenere)
-);
-
-CREATE TABLE SERIEFILM(
-  idSerieFilm int NOT NULL AUTO_INCREMENT,
-  idSerie int,
-  idFilm int,
-  tipo varchar(255),
-  sequenza int,
-  PRIMARY KEY (idSerieFilm),
-  FOREIGN KEY (idFilm) REFERENCES FILM(idFilm),
-  FOREIGN KEY (idSerie) REFERENCES SERIE(idSerie)
 );

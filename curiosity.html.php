@@ -7,7 +7,6 @@
   <div class="header">
     <?php include('header.php');?>
   </div>
-  <p>serie più lunga di film</p>
   <?php
     include 'connection.php';
 
