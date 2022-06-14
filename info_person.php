@@ -13,7 +13,7 @@ $sqlInfo = "SELECT *
 $statement = $db->query($sqlInfo);
 $infoPerson = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlDirected = "SELECT f.idFilm, f.titolo, f.anno
+$sqlDirected = "SELECT f.idFilm, f.titolo, YEAR(f.anno) as anno
                 FROM `film` as f
                 JOIN `ruolo` as r ON f.idFilm = r.idFilm
                 JOIN `persone` as p ON p.idPersona = r.idPersona
@@ -23,7 +23,7 @@ $sqlDirected = "SELECT f.idFilm, f.titolo, f.anno
 $statement = $db->query($sqlDirected);
 $directed = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlActed = "SELECT f.idFilm, f.titolo, f.anno
+$sqlActed = "SELECT f.idFilm, f.titolo, YEAR(f.anno) as anno
              FROM `film` as f
              JOIN `ruolo` as r ON f.idFilm = r.idFilm
              JOIN `persone` as p ON p.idPersona = r.idPersona

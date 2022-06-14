@@ -13,9 +13,12 @@ session_start();
   </div>
   <?php
   $infoPerson = $_SESSION['infoPerson'];
-  foreach($infoPerson as $value): ?>
+  foreach($infoPerson as $value): 
+    $birth_date = new DateTime($value['data_nascita']);
+    if($value['data_morte']){$death_date = new DateTime($value['data_morte']);}else{$death_date = '';}
+  ?>
   <p>
-    <?php echo $value['nome'] . ' ' . $value['cognome'] . '<br>Data di nascita: ' . $value['data_nascita'] . '<br>Data di morte: ' . (($value['data_morte'])?$value['data_morte']:"N/A") . '<br>';?>
+    <?php echo $value['nome'] . ' ' . $value['cognome'] . '<br>Data di nascita: ' . $birth_date->format('jS F Y') . '<br>Data di morte: ' . (($death_date)?$death_date->format('jS F Y'):"N/A") . '<br>';?>
   </p>
   <?php endforeach; ?>
   <?php

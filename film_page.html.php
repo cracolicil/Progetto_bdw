@@ -13,9 +13,11 @@ session_start();
   </div>
   <?php
   $infoFilm = $_SESSION['infoFilm'];
-  foreach($infoFilm as $value): ?>
+  foreach($infoFilm as $value): 
+    $date = new DateTime($value['anno']);
+  ?>
   <p>
-    <?php echo $value['titolo'] . '<br>Durata: ' . $value['durata'] . ' min<br>Uscita: ' . $value['anno'] . '<br>genere: ' . $value['genere'] . '<br>';?>
+    <?php echo $value['titolo'] . '<br>Durata: ' . $value['durata'] . ' min<br>Uscita: ' . $date->format('jS F Y') . '<br>genere: ' . $value['genere'] . '<br>';?>
   </p>
   <?php endforeach; ?>
   <?php
