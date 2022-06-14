@@ -21,7 +21,7 @@ session_start();
   <?php
   $people = $_SESSION['people'];
   foreach($people as $value): ?>
-    <a href=""  class="person-link">
+    <a href="info_person.php?idPerson=<?php echo $value['idPersona'] ?>"  class="person-link">
       <?php echo $value['nome'] . ' ' . $value['cognome'] . ' Ruolo: ' . $value['ruolo'] . '<br>';;?>
     </a>
     <?php endforeach; ?>
