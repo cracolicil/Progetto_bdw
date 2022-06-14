@@ -7,7 +7,7 @@
     <div class="header">
       <?php include('header.php');?>
     </div>
-    <form action="ricerca.php" method="post">
+    <form action="ricerca.html.php" method="post">
       <label for="search">Cerca:</label><br />
       <input type="text" id="search" name="searchname" />
       <input type="submit" value="Search" />

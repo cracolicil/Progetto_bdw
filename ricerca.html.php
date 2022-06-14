@@ -1,3 +1,12 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Ricerca</title>
+</head>
+<body>
+  <div class="header">
+    <?php include('header.php');?>
+  </div>
 <?php
 include 'connection.php';
 
@@ -32,3 +41,5 @@ if($persone){
 }
 
 ?>
+</body>
+</html>
