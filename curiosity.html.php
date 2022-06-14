@@ -7,13 +7,15 @@
   <div class="header">
     <?php include('header.php');?>
   </div>
+  <p>serie più lunga di film</p>
   <?php
     include 'connection.php';
 
     $db = OpenCon();
 
-    $sql = "SELECT YEAR(anno) as anno
-            FROM `film`";
+    $sql = "SELECT YEAR(anno) as anni
+            FROM `film`
+            GROUP BY (anni)";
 
     $statement = $db->query($sql);
     $years = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -33,7 +35,7 @@
           <?php 
             if($years){
                 foreach($years as $year){
-                    echo '<option value="'.$year['anno'].'">'.$year['anno'].'</option>';
+                    echo '<option value="'.$year['anni'].'">'.$year['anni'].'</option>';
                 }
             }
           ?>
