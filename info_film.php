@@ -18,7 +18,8 @@ $sqlPeople = "SELECT p.idPersona, p.nome, p.cognome, r.ruolo
               FROM `film` as f
               JOIN `ruolo` as r ON f.idFilm = r.idFilm
               JOIN `persone` as p ON p.idPersona = r.idPersona
-              WHERE f.idFilm = " . $idFilm;
+              WHERE f.idFilm = " . $idFilm . "
+              ORDER BY r.ruolo DESC, p.cognome ASC, p.nome ASC ";
 
 $statement = $db->query($sqlPeople);
 $people = $statement->fetchAll(PDO::FETCH_ASSOC);

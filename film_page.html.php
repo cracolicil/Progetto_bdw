@@ -19,6 +19,11 @@ session_start();
   <p>
     <?php echo $value['titolo'] . '<br>Durata: ' . $value['durata'] . ' min<br>Uscita: ' . $date->format('jS F Y') . '<br>genere: ' . $value['genere'] . '<br>';?>
   </p>
+  <p>
+    <?php echo 'Trama:'?>
+  </p>
+    <?php include($value['trama']);?>
+  <br><br>
   <?php endforeach; ?>
   <?php
   $people = $_SESSION['people'];
